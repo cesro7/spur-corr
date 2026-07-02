@@ -42,7 +42,7 @@ Classifiers based on Deep Neural Networks exhibit strong performance across doma
 ## 1. Clone repository
 
 ```bash
-git clone --recursive https://github.com/cesro7/AutoBackSwap.git
+git clone --recursive https://github.com/cesro7/spur-corr.git
 ```
 ---
 
