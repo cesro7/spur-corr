@@ -42,27 +42,12 @@ Classifiers based on Deep Neural Networks exhibit strong performance across doma
 ## 1. Clone repository
 
 ```bash
-git clone --recursive <repo_url>
-cd <repo_name>
+git clone --recursive https://github.com/cesro7/AutoBackSwap.git
 ```
 ---
 
-## 2. Environment setup
 
-Create a Python environment (version **3.12**) and install the project dependencies:
-
-```bash
-python -m venv venv
-source venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-> **Note:** `PyTorch` is **not** included in `requirements.txt` because the installation depends on your hardware (CPU/CUDA version). Install it separately. The project uses **torch==2.11.0+cu126** and **torchvision==0.26.0+cu126**.
-
----
-
-## 3. AOT-GAN dependency
+## 2. AOT-GAN dependency
 
 The repository uses AOT-GAN for background infilling.
 
@@ -71,6 +56,28 @@ Initialize submodules:
 ```bash
 git submodule update --init --recursive
 ```
+
+Download the pretrained generator weights from:
+
+https://drive.google.com/drive/folders/1bSOH-2nB3feFRyDEmiX81CEiWkghss3i?usp=sharing
+
+Place the downloaded checkpoint at:
+
+```text
+AOT-GAN-for-Inpainting/G0000000.pt
+```
+
+---
+
+## 3. Environment setup
+
+Create a Python environment (version **3.12**) and install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+> **Note:** `PyTorch` is **not** included in `requirements.txt` because the installation depends on your hardware (CPU/CUDA version). Install it separately. The project uses **torch==2.11.0+cu126** and **torchvision==0.26.0+cu126**.
 
 ---
 
